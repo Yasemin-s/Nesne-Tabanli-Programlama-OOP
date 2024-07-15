@@ -53,7 +53,7 @@ foto2 - Buradaki nesnelerin her biri car nesnesidir. Ama her biri birbirinden fa
 👉 ! Nesneler, referans türlü değişkenlerdir.
 Peki referans türlü değişkenler/değerler nelerdir?
 
-foto3                                                              
+         foto3                                               
                                                                                 
 Stackte değer türlü değişkenler ve değerleri ayrıca referanslar tutulur. Heapte ise sadece nesneler tutulur. Nesne, içinde bir veya birden fazla değer barındıran bir değerler bütünüdür. Developer olarak stackteki değişkenlere direk erişebilirm ama heapteki nesnelere direk erişemem ama stack, heap'e erişebilir. Stackte tanımlamış olduğumuz referanslar/değişkenler heap'e erişebilirler. Dolayısıyla biz stackte, heapteki nesneleri işaret eden referanslar tanımlayabiliyoruz ve böylece ben stacke , stackteki referansta heape erişmiş oluyor. Yani dolaylı olarak heape erişebiliyorum. Örnekteki, nesne1 in değeri stackte yoktur, bunun değeri heapteki nesne1 dir. Stackteki r1 ile heapteki nesne1 e erişebiliyorum/onu referanslıyorum/referans gösteriyorum/referans ediyorum.                                                                     
                                                                         
