@@ -41,19 +41,23 @@ Prosedürel programlamada bir sınıftaki butün çğrencilerin yaşlarını tut
 
   ✨ Nesne Kavramı ✨                                                                  
 Nesne, nesnellik felsefesine dayanan bir kavramdır. Dünyadaki her şeyi bir nesne olarak görme ve o şekilde yorumlamak fikrine dayanır.
-Nesne, gerçek hayatta elle tutulur gözle görülür objelerdir. Dolayısıyla programlamada nesnelerimiz günlük hayatta kullandığımız gibi elle tutulur gözle görünür objelermiş gibi yorumlanacak ve o gerçek objelerin modellemesi/muadili olarak tanımlanacaktır.            Nesne tabanlı programlama, o yazılım simülasyonunda sana gerçek hayatın ta kendisini sunuyor. Gerçek hayattaki herhangi bir olguyu, nesneyi, objeyi programlama dünyasında tarif ederken de onu bir nesne olarak tarif edecek ve o şekilde modelleyeceğiz.                                                                    
+Nesne, gerçek hayatta elle tutulur gözle görülür objelerdir. Dolayısıyla programlamada nesnelerimiz günlük hayatta kullandığımız gibi elle tutulur gözle görünür objelermiş gibi yorumlanacak ve o gerçek objelerin modellemesi/muadili olarak tanımlanacaktır. Nesne tabanlı programlama, o yazılım simülasyonunda sana gerçek hayatın ta kendisini sunuyor. Gerçek hayattaki herhangi bir olguyu, nesneyi, objeyi programlama dünyasında tarif ederken de onu bir nesne olarak tarif edecek ve o şekilde modelleyeceğiz.                                                                    
   ✨ Nesne Modellemesi ✨  
 Bir nesneyi nesne olarak kullanabilmen için öncelikle kodun içinde o nesneyi modellemen gerekiyor. Modelledikten sonra o modelden nesne oluşturabiliyorsun. 
 👉 ! Yani nesnelerin kullanılabilmesi için önce nesnenin modellenmesi gerekiyor. Nesne modeli ouşturabilme ihtiyacı classlar ile karşılanır. 
 
-foto2 - Buradaki nesnelerin her biri car nesnesidir. Ama her biri birbirinden farklı nesnelerdir. Hepsinin km si var, hepsinin tekeri var, beygiri var, rengi var. İşte bunlar classta modelleniyor yani oluşturduğum classta araba için şu özellikler(km,teker,beygir,renk) olması gerek diyorum. Modellenen bu değerler değiştirilebiliyor. Değişkenlikler nesne üzerinde olur ama ortak tanımlamalar modelde olur. Car modelinden üretilen nesneler birbiriyle haberleşme yeteneğine sahip ama birbirinden bağımsız sadece o olguyu tarif eden nesneler olmuş oluyor. 
+![1-2](https://github.com/user-attachments/assets/1d01a4b6-4197-4629-8736-d4c683514f71)
+
+
+Buradaki nesnelerin her biri car nesnesidir. Ama her biri birbirinden farklı nesnelerdir. Hepsinin km si var, hepsinin tekeri var, beygiri var, rengi var. İşte bunlar classta modelleniyor yani oluşturduğum classta araba için şu özellikler(km,teker,beygir,renk) olması gerek diyorum. Modellenen bu değerler değiştirilebiliyor. Değişkenlikler nesne üzerinde olur ama ortak tanımlamalar modelde olur. Car modelinden üretilen nesneler birbiriyle haberleşme yeteneğine sahip ama birbirinden bağımsız sadece o olguyu tarif eden nesneler olmuş oluyor. 
 
   ✨ Nesneler Hangi Türdedir? ✨  
 Şimdiye kadar değer türlü ve referans türlü değişkenler öğrendik. 
 👉 ! Nesneler, referans türlü değişkenlerdir.
 Peki referans türlü değişkenler/değerler nelerdir?
 
-foto3                                                              
+![1-3](https://github.com/user-attachments/assets/2ce06a13-0086-447f-a59f-c6f37bb10a58)
+                                                   
                                                                                 
 Stackte değer türlü değişkenler ve değerleri ayrıca referanslar tutulur. Heapte ise sadece nesneler tutulur. Nesne, içinde bir veya birden fazla değer barındıran bir değerler bütünüdür. Developer olarak stackteki değişkenlere direk erişebilirm ama heapteki nesnelere direk erişemem ama stack, heap'e erişebilir. Stackte tanımlamış olduğumuz referanslar/değişkenler heap'e erişebilirler. Dolayısıyla biz stackte, heapteki nesneleri işaret eden referanslar tanımlayabiliyoruz ve böylece ben stacke , stackteki referansta heape erişmiş oluyor. Yani dolaylı olarak heape erişebiliyorum. Örnekteki, nesne1 in değeri stackte yoktur, bunun değeri heapteki nesne1 dir. Stackteki r1 ile heapteki nesne1 e erişebiliyorum/onu referanslıyorum/referans gösteriyorum/referans ediyorum.                                                                     
                                                                         
