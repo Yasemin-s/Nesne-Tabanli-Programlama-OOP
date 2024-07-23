@@ -169,3 +169,71 @@ Görselde, base dediğimizde ise sadece base classtaki erişilebilir olanlara ul
 ![17-12](https://github.com/user-attachments/assets/2c918050-616e-4515-b622-79b63ec45692)
 
 Görselde, başına base koymadan kullanırsan da kalıtım olduğu için hatasız kullanabilirsin. Aynı şekilde this.c de diyebilirsin yada direkt c diyebilirsin. Direkt c dersen arka planda zaten başına this konuluyor. 
+
+
+👋 18 Inheritance - Kalıtım Nedir ?
+
+👋 4 - Nesnelerdeki ToString, Equals, GetHashCode ve GetType Metotları Nereden Gelmektedir ?
+
+Başlıktaki metotları nesnelere eklesekte eklemesekte gördük. 
+
+![18-1-1](https://github.com/user-attachments/assets/f395e783-b66a-469d-a4fb-69d2f6d654dd)
+
+Görselde Canli ve Insan diye sınıflarım var. Bu iki sınıf arasında kalıtımsal bir ilişki var. Insan sınıfından nesne oluşturduk. Oluşturulan bu nesnenin üzerinde (.) dediğimiz zaman Canli sınıfındaki Yasi görünüyor, onun dışında ne Canlida ne Insanda olan diğer fonksiyonlarımızda geliyor. Bu dört fonksiyon oluşturduğumuz tüm sınıflarda otomatik olarak gelmişti. 
+
+![18-1](https://github.com/user-attachments/assets/31ae6e76-d7ab-46f1-a5de-e31f2e691883)
+
+Görselde, MyClasstan bir tane nesne oluşturduğum zaman bu dört metot gelmiş bulunmaktadır. Bu metotlardan nerden/neden geliyor ? Bu metotlar kalıtımsal işlem sonucunda gelmektedir. Hangi kalıtımsal işlem sonucunda geliyor, bunu inceleyelim. 
+
+👉 ! C# programlama dilinde tüm nesnelerin/sınıfların atası olan bir sınıf vardır. Bu sınıfa direkt Object türü deriz. Tüm sınıflar Object sınıfından türetilir. 
+
+👉 ! İleride delegate dediğimiz sınıfları göreceğiz. Delegatelerde özünde bir nesnedir. Ama delegateler object sınıfından türemezler. 
+
+👉 ! Sen bir sınıfı oluşturduğunda bir sınıftan türese de türemese de bu sınıf object sınıfından türeyecektir. Bir sınıf oluşturduğunda compiler seviyesinde o sınıf otomatik olarak/default olarak Objectten türetilecektir. Haliyle Object sınıfı içerisindeki kalıtımsal olarak aktarılabilecek olan bazı metotlar/memberlar ilgili sınıfa aktarılmış olacaktır. Yukarıdaki görselde de metotun Objectten geldiğini görebilirsin.
+
+
+![18-2](https://github.com/user-attachments/assets/a5215f1b-04e1-417e-b019-6a64bf4c390c)
+
+Görselde, go to definication dersem, Objectin tanımlandığı yere giderim. 
+
+![18-3](https://github.com/user-attachments/assets/ef3db607-4e07-4c9e-b65f-043d12bdeffb)
+
+Görselde, bizim bütün nesnelerimizde gelen fonksiyonlar buradan gelmektedir. Bu sınıf/Object sınıfı C# programlama dilinde temel/base class olarak tanımlanmaktadır. Bütün sınıflar otomatik olarak buradan türemektedir.
+
+Temel programlamada object x  = ""; , Object türüne herhangi bir türü atayabiliyorduk. Haliyle Object her şeyi kapsayan bütün değerleri kapsayabilen bir özellik olmasının altında yazan sebep tüm değerlerin objectten türemesidir. Burdaki yapılanma polimorfizmde daha kolay anlaşılacaktır. 
+
+Objectten bütün nesnelerin türemesinden dolayı, object türü bütün değerleri karşılayabilmektedir. Bütün değerleri karşılayabildiğinden dolayı temel C# programlamadaki boxing unboxing kavramına değindiğimiz object türü işte buradaki tüm değerlerin türemesinden gelmektedir. 
+
+ ✨ Bir sınıf kalıtım alsa da almasa da Object sınıfından mı türemiştir ? ✨
+
+![18-2-2](https://github.com/user-attachments/assets/56d3d2a3-5f70-4022-8666-a296f9f7bf9d)
+
+Evet kaltıım alsa da almasa da default oalrak kaltıım sınıfından türemiştir. Eğer bir sınıf başka bir sınıftan kalıtım alsa da yine Object sınıfından türetilmiş olacaktır.  Insan sınıfı Canli sınıfıdnan türemiştir, Canlı sınıfıda Object sınıfından türemiştir yani dolaylı olarak Insan sınıfı yine Objetten türemiş olacaktır. 
+Bir sınıf birden fazla sınıfla aynı anda türetilemeyeceğinden dolayı herhangi bir sınıftan türediği anda Objectten türemez. Ama o türediği sınıf yine Objectten türeyeceği için dolaylı yoldan yine Object olacaktır. 
+Elinde hiyerarşik olarak birbirlerinde türeyen sınıfların olduğunu düşün işte bu sınıflardan en baştaki ata hangisiyse o sınıf Objectten türeyecektir. Dolaysııyla bu hiyerarşideki bütün sınıflar dolaylı olarak Objectten türeyecektir. 
+
+ ✨ Object Sınıfının İçeriğinde Ne Var Acaba ? - Object Sınıfı Memberları ✨
+
+![18-3](https://github.com/user-attachments/assets/aea59ded-f078-4c7e-91aa-e33de8f24f26)
+
+Constructor, destructor ve public olanlar Objectten türeyen tüm sınıflar için erişilebilir elemanlar olacaktır. 
+Virtual yapılanması, sanal yapılanmaların keywordüdür. Static keywordü, static belleğin üzerinde çalışmalar yaparken inceleyeceğimiz static yapılanmalara dair bir keyworddür. protected, public ve private dışındaki erişim belirleyicilerinden birisidir.  Protectedı erişim belirleyicilerinde inceleyeceğiz. 
+
+ ✨ İsim Saklama (Name Hiding) Sorunsalı ✨
+
+Kalıtım durumlarında atalardaki herhangi bir member ile 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
