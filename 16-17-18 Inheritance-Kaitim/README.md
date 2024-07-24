@@ -232,15 +232,34 @@ A'da olan X propertysi B'de de mevcuttur. Hem base classta hem de drived classta
 
 Atalardaki herhangi memberla bir sınıftaki member aynı isme sahipse bu duruma name hiding deriz. Neden name hiding ? Çünkü, görseldeki tasarımda base classtaki/atalardaki X memeberına B üzerinden erişmek mümkün değildir. Yani basedeki üye gizlenmiştir. b. dediğimizde gelen X, A'dan değil B'den gelmektedir. Haliyle atalardan gelecek olan memebrı bu şekilde gizlemiş oluyoruz. Bu durumda derleyici hata vermez ama bir uyarı/warning verecektir. 
 Görüldüğü üzere B sınıfının base classtaki X memeberını gçzleyeceğini ifade etmekte ve gizlenmesi için ise new keywordünün kullanılması gerektiğini söylemektedir. Eskiden kullanmak zorunluydu, kullanmazsan hata veriyordu ama günümüzde bir zorunluluk yok kullanmazsan sadece uyarı alırsın.
+
+![18-6](https://github.com/user-attachments/assets/a4256ecd-63c9-4016-bbeb-ded013789055)
+
 Eskiden name hiding durumlarında alt sınıfın içerisindeki üyeyi new ile işaretliyorduk. Günümüzde buna ihtiyaç yoktur. İhtiyaç yok ama biz yine name hiding durumlarında new operatörünün kullanımını inceleyelim. 
 
 
  ✨ Name Hiding Durumlarında new Operatörünün Kullanımı ✨
 
+![18-7](https://github.com/user-attachments/assets/246a7560-71b4-4525-9822-91f4f64e43c7)
 
+Bu şekilde new operatorü ile bildiride bulunduğumuzda derleyici bunun name hiding olduğunu ve unu iradeli bir şekilde kullandığımızı biliyor. Günümüzde bunu yapmak zorunda değilsin. 
 
+👉 ! Uyarı almak istemiyorsan torunlardaki name hidinge sebep olan memberı new keywordüile işaretle. 
 
+![18-8](https://github.com/user-attachments/assets/977e5701-e896-420d-9124-5b031ca79bd4)
 
+Görselde, X'in D'den geldiğini görüyoruz. X, A'da da var ama A'da ki X name hiding ile saklanmıştır, isim gizlenmiştir. Sen new operatörü kullansan da kullanamsan da name hiding durumu geçerli olacaktır, new operatorü kullanarak sadece compilerın hata vermesini engellemiş olursun. 
+
+👉 ! New keywordünü normalde nesne oluşturmada kullanıldığını biliyorduk, artık name hiding durumlarında compilerın hata vermemesi için kullanılması gerektiğini de öğrendik. 
  
+ ✨ Recordlarda Kalıtım ✨
+ 
+![18-9](https://github.com/user-attachments/assets/b8458581-96ab-4986-a5a6-56f2cc608569)
 
-
+Recordlar sadece recordlardan kalıtım alabilirler. 
+Classlardan kalıtım alamazlar yada kalıtım veremezler. 
+Kalıtıma dair tüm temel kurallar recordlar için de geçerlidir. 
+ - Bir record birden fazla recorddan kalıtım alamaz.
+ - Recordlarda temelde class oldukları için üretilir üretilmez otomatik olarak Objectten türerler.
+ - Base ve this keywordleri aynı amaçla kullanılabilmektedir.
+ - Name hiding söz konusu olabilmektedir. 
