@@ -87,25 +87,3 @@ Burada OrnekModel bir classtır ve referans noktası oluşturmak için OrnekMode
 ![2-9](https://github.com/user-attachments/assets/0868c8f8-fd35-4a7f-a6b0-2a30c01fda79)
 
 Referans noktası alma vs, bir classın türünden bir değişken oluşturuyorum. Şuan da herhangi bir şeyi referans etmiyor. Herhangi bir nesneyi referans etmediği için w, null değere sahiptir. Bir değişkenin null değere sahip olması için onun nullable olması gereklidir ve referans türlü değişkenler özünde nullabledir. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-👉 !
