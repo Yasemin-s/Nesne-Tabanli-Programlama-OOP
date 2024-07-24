@@ -221,14 +221,21 @@ Virtual yapılanması, sanal yapılanmaların keywordüdür. Static keywordü, s
 
  ✨ İsim Saklama (Name Hiding) Sorunsalı ✨
 
-Kalıtım durumlarında atalardaki herhangi bir member ile 
+Kalıtım durumlarında atalardaki/herhangi bir atadaki member ile aynı isimde membera sahip olan nesneler olabilmektedir. 
+
+![18-5](https://github.com/user-attachments/assets/85e83e54-8bd6-4804-a4f3-815287b937de)
+
+A'da olan X propertysi B'de de mevcuttur. Hem base classta hem de drived classta aynı isimde member mevcutsa biz burdaki memberın nerden geldiğini/ hangisinden geldiğini bilemeyiz. İşte bu bilememe durumuna name hiding(isim saklama) denir. Eğer burda A,B,C ve D gibi hiyerarşik bir kalıtım olsaydı en baştaki ve en sondaki memberlar aynı olsaydı yine name hiding olacaktı. Yani araya kalıtımsal açıdan birden fazla sınıf kullanabilirsiniz ve en baştakiyle sondaki sınıf arasında aynı isimde member olsaydı name hiding var diyecektik. 
+
+ ✨ Name Hiding Durumu Hangi Anlamı İfade Ediyor ? ✨
 
 
+Atalardaki herhangi memberla bir sınıftaki member aynı isme sahipse bu duruma name hiding deriz. Neden name hiding ? Çünkü, görseldeki tasarımda base classtaki/atalardaki X memeberına B üzerinden erişmek mümkün değildir. Yani basedeki üye gizlenmiştir. b. dediğimizde gelen X, A'dan değil B'den gelmektedir. Haliyle atalardan gelecek olan memebrı bu şekilde gizlemiş oluyoruz. Bu durumda derleyici hata vermez ama bir uyarı/warning verecektir. 
+Görüldüğü üzere B sınıfının base classtaki X memeberını gçzleyeceğini ifade etmekte ve gizlenmesi için ise new keywordünün kullanılması gerektiğini söylemektedir. Eskiden kullanmak zorunluydu, kullanmazsan hata veriyordu ama günümüzde bir zorunluluk yok kullanmazsan sadece uyarı alırsın.
+Eskiden name hiding durumlarında alt sınıfın içerisindeki üyeyi new ile işaretliyorduk. Günümüzde buna ihtiyaç yoktur. İhtiyaç yok ama biz yine name hiding durumlarında new operatörünün kullanımını inceleyelim. 
 
 
-
-
-
+ ✨ Name Hiding Durumlarında new Operatörünün Kullanımı ✨
 
 
 
