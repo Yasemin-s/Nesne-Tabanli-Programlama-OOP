@@ -212,16 +212,3 @@ Bir sınıfın içindeki nesneye idnexer özelliği kazandırmak istiyorsan thhi
 ![3-22](https://github.com/user-attachments/assets/664440bf-7a73-4ff8-8268-ebbf593cf824)
 
 Burda başka classta nesne oluşturup myClass[5] = 10; dedik. Ayrıca set içinde de parametredeki a ya erişebilirim.
-
-
-
-
-
-
-
-
-
-
-
-
-👉 !
